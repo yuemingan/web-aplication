@@ -1,0 +1,34 @@
+{% extends "socialnetwork/base.html" %}
+
+
+{% block nav-info %}
+    <div>
+        <a href="{% url 'myProfile' %}" id="id_nav_profile">
+            <button>{{ request.user.first_name }} {{request.user.last_name}}</button>
+        </a>
+    </div></br>
+    <div>
+        <a href="{% url 'global' %}" id="id_nav_global_stream">
+            <button>Global</button>
+        </a>
+        <a href="{% url 'follower' %}" id="id_nav_follower_stream">
+            <button>Follower</button>
+        </a>
+        <a href="{% url 'login' %}" id="id_nav_logout">
+            <button>Logout</button>
+        </a>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1 id="id_page_name" >Profile Page for Yuyang Hu</h1>
+        {% load static %}
+        <img src="{% static 'socialnetwork/myProfile.jpg' %}" id="id_user_picture"></br>
+        <p id="id_user_bio">Yuyang is a student now in CMU actively seeking for summer internship</p>
+        <div>
+            <button id="id_unfollow">Unfollow</button>
+        </div>
+    </div> 
+{% endblock %}

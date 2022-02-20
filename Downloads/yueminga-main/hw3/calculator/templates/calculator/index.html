@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+        <title>calculator</title>
+        <link rel="stylesheet" href="/static/calculator/calculator.css">
+    </head>
+    
+    <body>
+        <div>
+            
+                {% if entering == 'False'%}
+                <div id="output" class="output" style="background-color: green">
+                    {{output}}
+                </div>
+                {%else%}
+                <div id="output" class="output" style="background-color: moccasin">
+                    {{output}}
+                </div>
+                {%endif%}
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <form action="do-calculate" method='POST'>
+                <table class="table">
+                    <tr>
+                        <td><button id="key-7" class="button number" name="button" value="7">7</button></td>
+                        <td><button id="key-8" class="button number" name="button" value="8">8</button></td>
+                        <td><button id="key-9" class="button number" name="button" value="9">9</button></td>
+                        <td><button id="key-plus" class="button op" name="button" value="plus">&plus;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="key-4" class="button number" name="button" value="4">4</button></td>
+                        <td><button id="key-5" class="button number" name="button" value="5">5</button></td>
+                        <td><button id="key-6" class="button number" name="button" value="6">6</button></td>
+                        <td><button id="key-minus" class="button op" name="button" value="minus">&minus;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="key-1" class="button number" name="button" value="1">1</button></td>
+                        <td><button id="key-2" class="button number" name="button" value="2">2</button></td>
+                        <td><button id="key-3" class="button number" name="button" value="3">3</button></td>
+                        <td><button id="key-times" class="button op" name="button" value="times">&times;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button blank"> </button></td>
+                        <td><button id="key-0" class="button number" name="button" value="0">0</button></td>
+                        <td><button id="key-push" class="button op" name="button" value="push">&uarr;</button></td>
+                        <td><button id="key-divide" class="button op" name="button" value="divide">&divide;</button></td>
+                    </tr>
+                </table>
+                <input type="hidden" name="stack0" value={{stack0}}>
+                <input type="hidden" name="stack1" value={{stack1}}>
+                <input type="hidden" name="stack2" value={{stack2}}>
+                <input type="hidden" name="entering" value={{entering}}>
+                {% csrf_token %}
+            </form>
+        </div>
+    </body>
+</html>

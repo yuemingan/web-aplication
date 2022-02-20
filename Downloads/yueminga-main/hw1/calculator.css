@@ -1,0 +1,31 @@
+.output {
+    font-size: 40px;
+    float: left;
+    width: 300px;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    padding: 10px 20px;
+    text-align: right;
+    background-color: #cce6ff; /* baby blue*/
+    border-radius: 0%
+}
+
+.button {
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 40px;
+    margin: 5px;
+    border-radius: 30%;
+    cursor: pointer;
+    width: 68px;
+}
+
+.button:hover {background: #eee;/* grey*/}
+.number {background-color: #ccffcc; /* matcha green*/}
+.op {background-color: #ffffb3; /* lemon yellow*/}
+.blank {
+    background-color: white;
+    border: none;
+}

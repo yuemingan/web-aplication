@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+        <title>calculator</title>
+        <link rel="stylesheet" href="css/calculator.css">
+        <script src="js/calculator.js"></script>
+    </head>
+    
+    <body>
+    	<div id="output" class="output">
+            0
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <table class="table">
+                <tr>
+                    <td><button id="key-7" class="button number" onclick="digitClick(this)">7</button></td>
+                    <td><button id="key-8" class="button number" onclick="digitClick(this)">8</button></td>
+                    <td><button id="key-9" class="button number" onclick="digitClick(this)">9</button></td>
+                    <td><button id="key-plus" class="button op" onclick="opClick(this)">&plus;</button></td>
+                </tr>
+                <tr>
+                    <td><button id="key-4" class="button number" onclick="digitClick(this)">4</button></td>
+                    <td><button id="key-5" class="button number" onclick="digitClick(this)">5</button></td>
+                    <td><button id="key-6" class="button number" onclick="digitClick(this)">6</button></td>
+                    <td><button id="key-minus" class="button op" onclick="opClick(this)">&minus;</button></td>
+                </tr>
+                <tr>
+                    <td><button id="key-1" class="button number" onclick="digitClick(this)">1</button></td>
+                    <td><button id="key-2" class="button number" onclick="digitClick(this)">2</button></td>
+                    <td><button id="key-3" class="button number" onclick="digitClick(this)">3</button></td>
+                    <td><button id="key-times" class="button op" onclick="opClick(this)">&times;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button blank"> </button></td>
+                    <td><button id="key-0" class="button number" onclick="digitClick(this)">0</button></td>
+                    <td><button id="key-push" class="button op" onclick="pushClick()">&uarr;</button></td>
+                    <td><button id="key-divide" class="button op" onclick="opClick(this)">&divide;</button></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+    	
+

@@ -1,0 +1,40 @@
+{% extends "socialnetwork/base.html" %}
+
+
+{% block nav-info %}
+    <div>
+        <a href="{% url 'myProfile' %}" id="id_nav_profile">
+            <button>{{ request.user.first_name }} {{request.user.last_name}}</button>
+        </a>
+    </div></br>
+    <div>
+        <a href="{% url 'global' %}" id="id_nav_global_stream">
+            <button>Global</button>
+        </a>
+        <a href="{% url 'follower' %}" id="id_nav_follower_stream">
+            <button>Follower</button>
+        </a>
+        <a href="{% url 'login' %}" id="id_nav_logout">
+            <button>Logout</button>
+        </a>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1 id="id_page_name" >Profile Page for {{ request.user.first_name }} {{request.user.last_name}}</h1>
+        {% load static %}
+        <img src="{% static 'socialnetwork/myProfile.jpg' %}" id="id_user_picture"></br>
+        <textarea id="id_bio_input_text">Yueming is a student now in CMU actively seeking for summer internship</textarea>>
+        <form method="post" action="{% url 'myProfile' %}" name="myProfile">
+            <label>Profile Picture: </label>
+            <button id="id_profile_picture">Choose File</button>
+            <button id="id_update_profile_button">Submit</button>
+        </form>
+        <div>
+            You are following:
+            * <a href="{% url 'otherProfile' %}" id="id_profile_link_1">Yuyang Hu</a>
+        </div>
+    </div> 
+{% endblock %}

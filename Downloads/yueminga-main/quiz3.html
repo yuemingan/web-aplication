@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>quiz3</title>
+        <style>
+            li { font-size: 20px; margin: 4px;}
+            label, input { font-size: x-large; font-family: monospace; }
+            input.xy:hover { background-color: pink; }
+            input.xy:focus { background-color: lightblue; }
+            button { font-size: x-large; background-color: lightgray; margin: 5px; }
+            button:hover { background-color: pink; }
+            table { background-color: darkgray; padding: 25px; margin: 30px; }
+            td { text-align: center; }
+        </style>
+        <script>
+            function add() {
+                let x = document.getElementById('x').value
+                let y = document.getElementById('y').value
+                let ans = parseInt(x)+parseInt(y)
+                document.getElementById('ans').value = ans
+            }
+            function minus() {
+                let x = document.getElementById('x').value
+                let y = document.getElementById('y').value
+                let ans = parseInt(x)-parseInt(y)
+                document.getElementById('ans').value = ans
+            }
+            function times() {
+                let x = document.getElementById('x').value
+                let y = document.getElementById('y').value
+                let ans = parseInt(x)*parseInt(y)
+                document.getElementById('ans').value = ans
+            }
+            function divide() {
+                let x = document.getElementById('x').value
+                let y = document.getElementById('y').value
+                let ans = parseInt(x)/parseInt(y)
+                document.getElementById('ans').value = ans
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <h1>
+            Lecture #3 Quiz
+        </h1>
+        <ol>
+            <li>
+                Save the HTML source from this page into a file called
+                <kbd>quiz3.html</kbd> into the <strong>top-level</strong> directory of your class repo.
+            </li>
+            <li>
+                Add and commit this file (or skip this, if not in course): 
+                    <ul>
+                        <li><kbd>git add quiz3.html</kbd></li>
+                        <li><kbd>git commit -m &quot;Download of quiz3.html, before modification.&quot;</kbd></li>
+                    </ul>
+            </li>
+            <li>
+                Edit your <kbd>quiz3.html</kbd> file to make the four buttons do the math
+                (<label>X</label>&plus;<label>Y</label>, <label>X</label>&minus;<label>Y</label>, etc)
+                and display the answer in the <label>Ans</label> box.
+            </li>
+            <li>
+                Add, commit, and push your changes:
+                    <ul>
+                        <li><kbd>git add quiz3.html</kbd></li>
+                        <li><kbd>git commit -m &quot;Working quiz3 submitted.&quot;</kbd></li>
+                        <li><kbd>git push</kbd></li>
+                    </ul>
+            </li>
+        </ol>
+        <hr>
+        <table>
+            <tr>
+                <td>
+                    <label>X:</label>
+                </td>
+                <td>
+                    <input id="x" class="xy" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Y:</label>
+                </td>
+                <td>
+                    <input id="y" class="xy" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="add()">&plus;</button>
+                    <button onclick="minus()">&minus;</button>
+                    <button onclick="times()">&times;</button>
+                    <button onclick="divide()">&divide;</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Ans:</label>
+                </td>
+                <td>
+                    <input id="ans" type="text" readonly />
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
